@@ -139,8 +139,7 @@ class Zlapp(Fudan):
         检查
         """
         print("◉检测是否已提交")
-        get_info = self.session.get(
-            'https://zlapp.fudan.edu.cn/ncov/wap/fudan/get-info')
+        get_info = self.session.get('https://zlapp.fudan.edu.cn/ncov/wap/fudan/get-info')
         last_info = get_info.json()
 
         print("◉上一次提交日期为:", last_info["d"]["info"]["date"])
